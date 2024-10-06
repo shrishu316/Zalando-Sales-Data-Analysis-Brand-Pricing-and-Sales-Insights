@@ -3,6 +3,29 @@
 ## Overview
 This project focuses on analyzing the **Zalando Product Dataset** to explore pricing trends, brand performance, and sales distribution. Key figures, visualizations, and statistical methods were applied to extract insights from the data.
 
+## Dataset
+- **Source:** [Zalando Product Dataset on Kaggle](https://www.kaggle.com/datasets/polartech/zalando-product-dataset)
+- **Key Columns:**
+  - `PRICE_CURRENT`: Product price
+  - `BRAND`: Product brand
+  - `CATEGORY`: Product category
+  - `GENDER`: Gender target
+  - `SCAN_DATE`: Date of price scan
+
+## Data Preprocessing
+1. Removed unnecessary columns like `SKU_VARIANT`, `PROMOTION`.
+2. Handled missing data in `PRICE_LABEL` and standardized `CATEGORY`.
+3. Converted `SCAN_DATE` to `datetime` and extracted year/month.
+
+## Statistical Tests
+- **ANOVA Test:** Detected significant price differences among brands.
+- **Tukey HSD Test:** Post-hoc comparison between brand prices.
+
+## How to Use
+1. Install necessary dependencies:
+   ```bash
+   pip install pandas matplotlib seaborn scipy statsmodels
+
 ## Visualizations
 ### Price Distribution
 ![Price Distribution in Bekleidung Category](https://github.com/user-attachments/assets/7bb811b0-4aa2-409f-8f20-700b98e746ef)
@@ -28,30 +51,3 @@ This project focuses on analyzing the **Zalando Product Dataset** to explore pri
 ### Price Distribution for Selected Brands
 ![Price Distribution for Selected Brands](https://github.com/user-attachments/assets/ed7b5c7a-cff3-433c-bcce-2fe615ae1465)
 
-## Dataset
-- **Source:** [Zalando Product Dataset on Kaggle](https://www.kaggle.com/datasets/polartech/zalando-product-dataset)
-- **Key Columns:**
-  - `PRICE_CURRENT`: Product price
-  - `BRAND`: Product brand
-  - `CATEGORY`: Product category
-  - `GENDER`: Gender target
-  - `SCAN_DATE`: Date of price scan
-
-## Data Preprocessing
-1. Removed unnecessary columns like `SKU_VARIANT`, `PROMOTION`.
-2. Handled missing data in `PRICE_LABEL` and standardized `CATEGORY`.
-3. Converted `SCAN_DATE` to `datetime` and extracted year/month.
-
-## Key Figures
-- **Top Brands:** Analysis of top 10 brands by total sales.
-- **Price Segmentation:** Grouped products into Low, Medium, and High price ranges.
-- **Brand Price Analysis:** Comparison of average prices across selected brands.
-
-## Statistical Tests
-- **ANOVA Test:** Detected significant price differences among brands.
-- **Tukey HSD Test:** Post-hoc comparison between brand prices.
-
-## How to Use
-1. Install necessary dependencies:
-   ```bash
-   pip install pandas matplotlib seaborn scipy statsmodels
